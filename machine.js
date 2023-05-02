@@ -1,7 +1,7 @@
 import { createMachine } from 'xstate';
 
 const SmartFridge = createMachine({
-  /** @xstate-layout N4IgpgJg5mDOIC5QBUAWYAEBhA9jgNtjgLYAOAhgHYCWOlAdLgdZVBgMoCesALmMfQDyAM2EBiXJUpgAxjww8cGAAo4A7mABOAbQAMAXUShSOWNR61KRkAA9EAZgAc9+o4CMATg8AmNwBZvb0dHAHZnABoQTkQ-N3oPR19HXRC3VIBWD3S-AF8cyLRMJkJcMipLRjx8FjYuXn4hBmKasWR+Ui1yHgBXTUwAJTByGXQIPUMkEBMzCzprOwQAWjd0uNiANn8Q9JD1711QyOiEdfT1+l0fRw8-EI83ez90xzyC9CICIjKaOkrmVg43D4AkETSqLTaZE6PT6GEGw1G2jcE2MpnMlnmiGWq3o3my3ieO2u6XsNyOiBCAVcbj2oXc-j26VeIEKHxKJAoPzB-1qQIaoL+1VYYgAkjJMABBGQybrEbr4LqQcbWabouaTBZ+Dz0dKXEL7PGne7PckIHbeHXXRzpXxBLK5fIs97FL6cirNAF1YGNQUtABiEoAqgAZZDKyaq2ZWDVYs70Ukk9bXA663weU32dZ+ehuUIrYJ+TP2AnrZmsl2lN2-D28+oghgiiD4MCtdrQ3qYZB4DAACWoUFQ4dRMwxMaWbl02cpDwn+Psukn6VNQUc8e21uc3ke9jcbjLzqqrvK1fBnr59foABEwMJNKYLMKxZgALJgfB8MYGFVoqOY8fJHNkyzPFrl2ewQlNJ4p3sHdwJJWcvH3IpD0rY9uSFWtvQFa9b3vf0g1DIcph-UdQAWexdUAoIdyTPw-FOPxIOyegQhgh5th3XRMg8JC2SPLkrzwTR6BkfBTEgMRBA6SgMEvISiMjUjbCxLc4hCScgknXZdAeU0J1OFj3ECGlHELdYsl4isOTQwScGEnBpIkrAxNgTA5LshSSPVMiVOLVxUmtdSkxMp49LxFxYiCPxdHWR4zmcPJHUoHAIDgaxyxQ6yuW-EdvOUpYtVXcygnMijTkndMoixfwLVg6LbhSZwEsdDLPlQgSa0BOscrVaMfIKyjiscUqzl1LVTUWZj3EeSdLjSRI0iZFqDzarL3VPTD+VEHrfzHRYnHSHVMgXA4QnUjwwgzC0kyNU4CW8Vj7kszLvnWnkuqwvriNyr6FkWaLrquEbyvGqqEH2XR-OeUkgh2Pxrm8Z7Vtek93q9fl0JqHalL+ijsyG4Gxsq456LiCcdIJSd1lY3QtyR9kUcxs86x9Rtm2xvKFlTC4J1uGDsgONJII8SGUnhzNdRgh6HTeZDkarJnNovHC714LGIy836KWzTJ1j1nZ-GyNJ7CY6D5wSeHvFOXUQnp-i3owj6MfoP1yHlHgOa1hAaNcCmdNM5wdhNsHMwtEXdn2VI8RF0tlrlhmFdszRPb-f6qQXLxnmp0rhqXMGLtXII3Ae2K2PuWPZb49qKnc4TRPEiAU720lswzrJht2DwnFOPSaRcFZTp8K2wjou3q9+Wv6AcsBpEbjWftTgkcyLEXNzojwe7B3dYpzXVTJ0sJwJuRKciAA */
+  /** @xstate-layout N4IgpgJg5mDOIC5QBUAWYAEBhA9jgNtjgLYAOAhgHYCWOlAdAEpgBmATtVNW+QC45t6AeRYsAxLkqUwAY14Z+GAAo4A7mDYBtAAwBdRKFI5Y1XrUoGQAD0QBmbQCZ6tgBwB2bbbcBGF7e8ArAEOADQgAJ6I3toAnPQALA7xMd4AbC6xXg7a8QC+uWFomLgERGRU5kysHFw8-IJCDCX4GvTN1JRQYshgZBp8AK5smMzkMugQOvpIIEYmZnSWNgi2TjGerqkB3jE+aalhkQgu0c7BwSkBqele+YXoRKW45TR0Veyc3HwCwk14LYJ2p0xAAxACCAFUADLIKaWOamcxLRAAWm8Dm89AcHliqXRMXi0VsMUOdhitnoGVSKR22VSbhiLgCdxARUehGeFFeDGYH1q3wafwIrSBXQAkjJMGCZDIBsQBvg+JA4TMEQsLDNlg4Kd54vEXHqTgEfLYAvFSQg8aksVt1gaMQF3LYWWzmmUuZVeTUvvVfm1-q0xRAWt1eqR+rwhphkHgMAAJTioFWGYyIxaaxDxa1pdG2dIObKJQIHCKINzZei43ExVLaLYuF0PN2cipvL2fOo-Rr+4WCAAi1WMZmBEswAFkwPheMq9PDU+rkQgs5XsVs3P5jd5TQ4S0dttpnH5tJvggbAo3iv93a2edUOwK-c1WgP2EOOl1wdDYbPVfOkRmEAcAl6G8NxrgJbEYmNNwAlsC0szifxdjA-xsX8Z0ClZJsrxbbl6D7PBBBkfBjEgMQhHDSgMAIgRk1mP901AZY0XsegzXzFxUlQrcSVLBAdl1NjCQZRx1xcPwYgvdlrzwmjBBwSiyKwEjYEwOS6LVf8mNRbxfCxTxtC3K50RyNxzT40CAgPNxy2SPMmSpNwpObEgPTbO9+V9bsQWGMAAC9Wh8sB-PfUFIRhDSGI1bT+Ixeh0ipakHHEgICRcC1omS+gYmxbQ8pyaDUjyTDXRw1yb3eb1O0Feggv859B1gYcP3C79phTeYtOsTMK2pXwCVg9EAgyoz4ps-KCpsornLKl5PQ8n0uwYOqAsEFbQtHDBpVleVFWnSYfw6tNou6hByQSAs9VpFKoIyjEXGy3L8viQrivuS8nnKvD208pbat81b8Ma5qxE2icpxndr6M6xjTt0617HOPVkqZNKRquR6cTyl6prerCPo5L75r5RaapWwKAdCno+jqKMMFGcZIbnGGTuYilUiA-VQIxeJ13JdIMviWx4kxiacbAvHSs+ub3JJ6q-XJwQgxDanw1p4YMBjHB40TSKWcXAJ4sJAScpu-UXoy2x-DGrHJol-JMMoHAIDgSwpcJmWTs02G2e2eL3BevNuOJC0US2NiYO0PwdjrSDUhm6W3NvOWBWZ47FxRewDw5gla1g9cs3Svi4py5I0gycly08eOSuwxOKp+0nhFENOFwAlE6TYrIXvibQfANM0MtiC6y-STIq8luuPaTyr7y8r2oozhxgnizm868YWBeL0C2KuTi8T1VDrgT6eG4W+XuyfNhW665j+spXTyXsPZe+CC1EcrPfrl1IX0WP2uCYyWJlVB8l8AyAn+O+G+PsdKEgfjsK2fddKv1CHxWsTg3AnELqaQImCT5ANliA+ePYAT0GVmAaBrNEBXBFmPVKeY-77wtOWa0fho7UigtcHc+DcLALnn9K+QNXxNSgb+fWAFkqYmPFBOsNkoI2VghaK0NpUpRyLI6dcPCiaEP4TVQRIJyAKl4JQxc2pDbRA5gJAq7F345V3n1WksjGTMgAdJXhOjfpkwBhoEx7dCyr1zseDehcLQEkxKBW24tpquJcp7fChFfExUzp4f2ZlYJcXRDxDK1wKTYiSH4As2wtwYXem47RDA5L0GIqRCAiTTodyCKkwOGSMQhwsicJwupsjoTrBEmupTYkz0qQpMA0haliPTgBRp6xkj6lSoyNIhIModJAokTwW5elTS0XExuF9lreLWpTTodS74YxzlmIJBct5HHRMvMa1IXBJCzDsAk2yZ67NAfs4KgNyEnMzDsECKQXADVQsNCywtMT0kia9N5Z8U7EMVkItgb5jkTLbjFQkFIha90ees5ed07lQrFjCmJs13nn0+f9b5gVDFTj+UuQygL+qByGkPbENtiW4wdrkIAA */
   id: "The Cool Companion",
   initial: 'off',
   type: 'parallel',
@@ -9,7 +9,7 @@ const SmartFridge = createMachine({
     temperature: 25,
   },
   states: {
-    "Cooling System": {
+    Refrigirator: {
       initial: "Off",
       states: {
         Off: {
@@ -19,41 +19,78 @@ const SmartFridge = createMachine({
             }
           }
         },
-        On: {
-          initial: "Cooling",
-          states: {
-            Cooling: {
-              on: {
-                "Temperature Reached": [{
-                  target: "Idle",
-                  cond: "temp equals target temp"
-                }, {
-                  target: "Cooling",
-                  internal: true
-                }],
-                "Ice Accumulated": "Defrosting",
-                "FAULT": "Fault"
-              }
-            },
 
-            Idle: {
-              on: {
-                "Temperature Too High": {
-                  target: "Cooling",
-                  cond: "temp >  target temp"
+        On: {
+          type: 'parallel',
+          states: {
+            Cooler: {
+              initial: "Cooling",
+              states: {
+                Cooling: {
+                  on: {
+                    "Temperature Reached": {
+                      target: "Idle",
+                      cond: "temp equals target temp"
+                    },
+    
+                    "FAULT": "Fault",
+                    "Ice Accumulated": "Defrosting"
+                  }
+                },
+
+                Idle: {
+                  on: {
+                    "Temperature Too High": {
+                      target: "Cooling",
+                      cond: "temp >  target temp"
+                    }
+                  }
+                },
+
+                Defrosting: {
+                  on: {
+                    "Ice Melted": "Cooling",
+                    "FAULT": "Fault"
+                  }
+                },
+
+                Fault: {
+                  type: "final"
                 }
               }
             },
+            Freezer: {
+              states: {
+                Freezing: {
+                  on: {
+                    FAULT: "Fault",
+                    "Ice Accumulated": "Defrosting",
+                    "Temperature Reached": {
+                      target: "Idle",
+                      cond: "temp equals target temp"
+                    }
+                  }
+                },
+                Idle: {
+                  on: {
+                    "Temperature Too High": {
+                      target: "Freezing",
+                      cond: "temp > target temp"
+                    }
+                  }
+                },
+                Defrosting: {
+                  on: {
+                    FAULT: "Fault",
+                    "Ice Melted": "Freezing"
+                  }
+                },
+                Fault: {
+                  type: "final"
+                }
+              },
 
-            Defrosting: {
-              on: {
-                "Ice Melted": "Cooling",
-                "FAULT": "Fault"
-              }
-            },
-
-            Fault: {
-              type: "final"
+              initial: "Freezing"
             }
           }
         }
