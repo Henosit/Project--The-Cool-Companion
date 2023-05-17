@@ -81,11 +81,11 @@
                 },
                 "Defrosting": {
                   "on": {
-                    "FAULT": {
-                      "target": "Fault"
-                    },
                     "Ice Melted": {
                       "target": "Freezing"
+                    },
+                    "FAULT": {
+                      "target": "Fault"
                     }
                   }
                 },
@@ -127,6 +127,18 @@
                   }
                 }
               }
+            },
+            "Product Managment": {
+              "initial": "Idle",
+              "states": {
+                "Update Products": {
+                  "on": {
+                    "Product Taken Out": {},
+                    "Product Added": {}
+                  }
+                },
+                "Idle": {}
+              }
             }
           },
           "type": "parallel"
@@ -146,6 +158,13 @@
             "1": {
               "target": "#The Cool Companion.Refrigirator.On.Lights.LIGHTS_OFF",
               "actions": [],
+              "internal": false
+            },
+            "0.5": {
+              "target": "#The Cool Companion.Refrigirator.On.Product Managment.Update Products",
+              "actions": [
+                "Scan Refrigirator Content"
+              ],
               "internal": false
             }
           },
