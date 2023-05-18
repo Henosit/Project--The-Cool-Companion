@@ -21,7 +21,6 @@ const fetchMachine = Machine({
                   on: {
                     'Temperature Reached': {
                       target: 'Idle',
-                      cond: 'temp === target temp'
                     },
                     FAULT: {
                       target: 'Fault',
@@ -38,7 +37,6 @@ const fetchMachine = Machine({
                   on: {
                     'Temperature Too High': {
                       target: 'Cooling',
-                      cond: 'temp > target temp'
                     }
                   }
                 },
@@ -76,7 +74,6 @@ const fetchMachine = Machine({
                     },
                     'Temperature Reached': {
                       target: 'Idle',
-                      cond: 'temp === target temp'
                     }
                   }
                 },
@@ -84,7 +81,6 @@ const fetchMachine = Machine({
                   on: {
                     'Temperature Too High': {
                       target: 'Freezing',
-                      cond: 'temp > target temp'
                     }
                   }
                 },
